@@ -60,10 +60,11 @@ model Collect {
 }
 
 model Profile {
-  id          Int      @id @default(autoincrement())
-  name        String   @db.VarChar(maxLength: 245)
-  cpf         String   @db.VarChar(maxLength: 245)
-  date_create DateTime @db.Date
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(maxLength: 245)
+  cpf       String   @db.VarChar(maxLength: 245)
+  create_at DateTime @db.Date
+  update_at DateTime @db.Date
 
   address Address?
   rewards Rewards?
